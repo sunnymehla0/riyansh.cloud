@@ -1,0 +1,249 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f9fafb 100%);
+    min-height: 100vh;
+    color: #22223b;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4f8cff;
+    padding: 20px 8%;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+nav .logo {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav .logo i {
+    margin-right: 10px;
+    color: #fff700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.08rem;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #fff700;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8% 40px 8%;
+    background: #e0e7ff;
+}
+
+.header-content {
+    flex: 1 1 340px;
+    min-width: 320px;
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    color: #1e293b;
+    margin-bottom: 18px;
+}
+
+.header-content p {
+    font-size: 1.15rem;
+    color: #4f8cff;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    padding: 12px 34px;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #b5d3ff80;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn:hover {
+    background: #1c4ed8;
+    transform: translateY(-2px);
+}
+
+.header-image img {
+    width: 260px;
+    max-width: 100%;
+    filter: drop-shadow(0 6px 20px #4f8cff40);
+}
+
+section {
+    padding: 50px 8% 30px 8%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 38px;
+    color: #1e293b;
+    letter-spacing: 1px;
+}
+
+.services-container {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px #4f8cff13;
+    padding: 32px 24px;
+    max-width: 310px;
+    flex: 1 1 255px;
+    min-width: 240px;
+    text-align: center;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+.service-card:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 12px 36px #4f8cff33;
+}
+
+.service-card i {
+    font-size: 2.7rem;
+    color: #4f8cff;
+    margin-bottom: 22px;
+}
+.service-card h3 {
+    margin-bottom: 15px;
+    color: #22223b;
+    font-size: 1.2rem;
+}
+.service-card p {
+    color: #5c607e;
+    font-size: 0.98rem;
+}
+
+.about-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    list-style: none;
+    margin-top: 18px;
+}
+
+.about-list li {
+    background: #f3f8ff;
+    padding: 18px 32px;
+    border-radius: 12px;
+    font-size: 1.07rem;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 10px #4f8cff13;
+}
+
+.about-list i {
+    color: #4f8cff;
+    font-size: 1.2rem;
+}
+
+form {
+    max-width: 390px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px #4f8cff13;
+}
+
+form input, form textarea {
+    border: 1.5px solid #cdd5df;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+    resize: none;
+}
+
+form input:focus, form textarea:focus {
+    border: 1.5px solid #4f8cff;
+}
+
+form button {
+    width: 100%;
+}
+
+footer {
+    background: #4f8cff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 4%;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 950px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 32px;
+    }
+    .header-image img {
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+        padding: 16px 3%;
+    }
+    header, section {
+        padding: 35px 3% 20px 3%;
+    }
+    .service-card {
+        min-width: 180px;
+        padding: 22px 12px;
+    }
+    form {
+        padding: 18px 8px;
+    }
+}
